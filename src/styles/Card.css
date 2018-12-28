@@ -1,0 +1,5 @@
+.row  > div {
+    padding: 1rem;
+    border: 2px;
+    text-align: center;
+}

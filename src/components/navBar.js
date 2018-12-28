@@ -13,7 +13,6 @@ import {
     DropdownItem } from 'reactstrap';
 import logo from '../sources/logo.png';
 
-
 class NavBar extends Component{
     constructor(props) {
         super(props);
@@ -30,9 +29,7 @@ class NavBar extends Component{
 
     render(){
         return(
-
-
-                <Navbar color="light" light expand="md" >
+                <Navbar color="white" light expand="md"  fixed="top" >
                     <NavbarBrand href="/">
                         <img src={logo} alt="IHSPH Logo" height="70" />
                     </NavbarBrand>
@@ -63,9 +60,28 @@ class NavBar extends Component{
                             <NavItem>
                                 <NavLink href="#">Parent</NavLink>
                             </NavItem>
-                            <NavItem>
-                                <NavLink href="#">Student</NavLink>
-                            </NavItem>
+
+                            <UncontrolledDropdown nav inNavbar>
+                                <DropdownToggle nav caret>
+                                    Student Life
+                                </DropdownToggle>
+                                <DropdownMenu>
+                                   
+                                    <DropdownItem>
+                                        <NavLink href="/activities">Activities </NavLink>
+                                    </DropdownItem>
+                                    <DropdownItem divider />
+                                    <DropdownItem>
+                                        <NavLink href="/clubs" >Clubs </NavLink>
+                                    </DropdownItem>
+                                    <DropdownItem divider />
+                                    <DropdownItem>
+                                        <NavLink href="/internships">Internships</NavLink>
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </UncontrolledDropdown>
+
+                            
                             <NavItem>
                                 <NavLink href="#">Everything About College</NavLink>
                             </NavItem>
