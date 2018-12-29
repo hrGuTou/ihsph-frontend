@@ -7,7 +7,7 @@ class Activities extends Component {
     return (
 
 
-      <MDBContainer style={{ marginTop: "7rem" }}>
+      <MDBContainer>
 
 
 

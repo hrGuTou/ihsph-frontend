@@ -53,7 +53,7 @@ toggle = (tab) => {
       return(
         
         
-        <MDBContainer style={{marginTop:"7rem" }}>
+        <MDBContainer >
 
 <MDBBreadcrumb >
           <MDBBreadcrumbItem>Student Life</MDBBreadcrumbItem>
@@ -65,13 +65,13 @@ toggle = (tab) => {
         <MDBCol md="3" >
         <MDBContainer>
             <MDBListGroup>
-              <MDBListGroupItem href="#"  onClick={()=> {
+                  <MDBListGroupItem href="#" active={this.state.activeItem == 1} onClick={()=> {
                   this.toggle("1");
                   }} >Computer Science</MDBListGroupItem>
-              <MDBListGroupItem href="#" onClick={()=> {
+              <MDBListGroupItem href="#" active={this.state.activeItem==2} onClick={()=> {
                   this.toggle("2");
                   }} >Business</MDBListGroupItem>
-              <MDBListGroupItem href="#" onClick={()=> {
+              <MDBListGroupItem href="#" active={this.state.activeItem==3} onClick={()=> {
                   this.toggle("3");
                   }} >Accounting</MDBListGroupItem>
             </MDBListGroup>

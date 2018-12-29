@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Button, Card, CardBody, CardImage, CardTitle, CardText, Col, Row, MDBContainer, MDBCol, MDBRow, MDBCardHeader, MDBCard } from 'mdbreact';
 
 /*
-    接收 <MyCard imgUrl="", title="", content="">
+    接收 <MyCard imgUrl="" title="" content="" linkTo="">
 */
 
 
@@ -13,7 +13,7 @@ class MyCard extends Component {
 
     render() {
         return (
-            <Card style={{ marginBottom: "1em" }}>
+            <Card>
                 <CardImage
                     className="img-fluid"
                     src={this.props.imgUrl}
@@ -25,7 +25,7 @@ class MyCard extends Component {
                     <CardText>
                         {this.props.content}
                     </CardText>
-                    <Button href="#">Learn More</Button>
+                    <Button href={this.props.linkTo}>Learn More</Button>
                 </CardBody>
             </Card>
 
